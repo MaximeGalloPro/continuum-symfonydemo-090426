@@ -1,0 +1,311 @@
+{
+  "generated_at": "2026-04-08T21:07:14.074Z",
+  "generated_by": "story-teller",
+  "domains": [
+    {
+      "name": "blog",
+      "display_name": "Blog",
+      "stories": [
+        {
+          "id": "story-controller-BlogController",
+          "title": "Consulter et parcourir le blog",
+          "persona": "visiteur",
+          "action": "lister les articles, lire le flux RSS et consulter un article par son slug",
+          "benefit": "rester informé des dernières publications du blog",
+          "source": {
+            "type": "controller",
+            "name": "BlogController",
+            "source_file": "/input/src/AppBundle/Controller/BlogController.php"
+          },
+          "test_files": [
+            "/output/test/blog.integration-spec.ts"
+          ],
+          "acceptance_criteria": [
+            {
+              "id": "ac-001",
+              "description": "GET /blog/ → liste paginée",
+              "implemented": false
+            },
+            {
+              "id": "ac-002",
+              "description": "GET /blog/rss.xml → flux RSS valide",
+              "implemented": false
+            },
+            {
+              "id": "ac-003",
+              "description": "GET /blog/page/{page} → pagination",
+              "implemented": false
+            },
+            {
+              "id": "ac-004",
+              "description": "GET /blog/posts/{slug} → article",
+              "implemented": false
+            },
+            {
+              "id": "ac-005",
+              "description": "POST commentaire → auth requise",
+              "implemented": false
+            }
+          ],
+          "estimated_complexity": "medium",
+          "feedback_history": []
+        },
+        {
+          "id": "story-entity-Post",
+          "title": "Valider les données d'un article",
+          "persona": "système",
+          "action": "valider et persister les articles avec leurs métadonnées",
+          "benefit": "garantir l'intégrité des données publiées",
+          "source": {
+            "type": "entity",
+            "name": "Post",
+            "source_file": "/input/src/AppBundle/Entity/Post.php"
+          },
+          "test_files": [
+            "/output/test/models/post.spec.ts"
+          ],
+          "acceptance_criteria": [
+            {
+              "id": "ac-006",
+              "description": "Titre et résumé requis (NotBlank)",
+              "implemented": false
+            },
+            {
+              "id": "ac-007",
+              "description": "Contenu min 10 caractères",
+              "implemented": false
+            },
+            {
+              "id": "ac-008",
+              "description": "Maximum 4 tags par article",
+              "implemented": false
+            },
+            {
+              "id": "ac-009",
+              "description": "PublishedAt au format datetime",
+              "implemented": false
+            },
+            {
+              "id": "ac-010",
+              "description": "Auteur (ManyToOne) obligatoire",
+              "implemented": false
+            }
+          ],
+          "estimated_complexity": "medium",
+          "feedback_history": []
+        },
+        {
+          "id": "story-entity-Tag",
+          "title": "Catégoriser les articles par tag",
+          "persona": "administrateur",
+          "action": "créer et associer des tags uniques aux articles",
+          "benefit": "organiser et filtrer le contenu du blog",
+          "source": {
+            "type": "entity",
+            "name": "Tag",
+            "source_file": "/input/src/AppBundle/Entity/Tag.php"
+          },
+          "test_files": [
+            "/output/test/models/tag.spec.ts"
+          ],
+          "acceptance_criteria": [
+            {
+              "id": "ac-011",
+              "description": "Nom de tag unique",
+              "implemented": false
+            },
+            {
+              "id": "ac-012",
+              "description": "Sérialisation JSON → nom du tag",
+              "implemented": false
+            },
+            {
+              "id": "ac-013",
+              "description": "__toString retourne le nom",
+              "implemented": false
+            }
+          ],
+          "estimated_complexity": "low",
+          "feedback_history": []
+        }
+      ]
+    },
+    {
+      "name": "blog-administration",
+      "display_name": "Administration du Blog",
+      "stories": [
+        {
+          "id": "story-controller-AdminBlogController",
+          "title": "Administrer les articles du blog",
+          "persona": "administrateur",
+          "action": "créer, modifier, consulter et supprimer des articles",
+          "benefit": "gérer intégralement le contenu publié sur le blog",
+          "source": {
+            "type": "controller",
+            "name": "Admin\\BlogController",
+            "source_file": "/input/src/AppBundle/Controller/Admin/BlogController.php"
+          },
+          "test_files": [
+            "/output/test/admin-blog.integration-spec.ts"
+          ],
+          "acceptance_criteria": [
+            {
+              "id": "ac-014",
+              "description": "Accès restreint à ROLE_ADMIN",
+              "implemented": false
+            },
+            {
+              "id": "ac-015",
+              "description": "GET /admin/post/ → liste",
+              "implemented": false
+            },
+            {
+              "id": "ac-016",
+              "description": "POST new → validation CSRF",
+              "implemented": false
+            },
+            {
+              "id": "ac-017",
+              "description": "POST edit → contrôle PostVoter",
+              "implemented": false
+            },
+            {
+              "id": "ac-018",
+              "description": "DELETE → token CSRF requis",
+              "implemented": false
+            }
+          ],
+          "estimated_complexity": "high",
+          "feedback_history": []
+        }
+      ]
+    },
+    {
+      "name": "commentaires",
+      "display_name": "Commentaires",
+      "stories": [
+        {
+          "id": "story-entity-Comment",
+          "title": "Valider et modérer les commentaires",
+          "persona": "utilisateur authentifié",
+          "action": "soumettre un commentaire sur un article",
+          "benefit": "participer aux discussions tout en évitant le spam",
+          "source": {
+            "type": "entity",
+            "name": "Comment",
+            "source_file": "/input/src/AppBundle/Entity/Comment.php"
+          },
+          "test_files": [
+            "/output/test/models/comment.spec.ts"
+          ],
+          "acceptance_criteria": [
+            {
+              "id": "ac-019",
+              "description": "Contenu entre 5 et 10000 caractères",
+              "implemented": false
+            },
+            {
+              "id": "ac-020",
+              "description": "Rejet si '@' dans le contenu",
+              "implemented": false
+            },
+            {
+              "id": "ac-021",
+              "description": "PublishedAt format datetime",
+              "implemented": false
+            },
+            {
+              "id": "ac-022",
+              "description": "ManyToOne vers Post obligatoire",
+              "implemented": false
+            }
+          ],
+          "estimated_complexity": "medium",
+          "feedback_history": []
+        }
+      ]
+    },
+    {
+      "name": "authentification",
+      "display_name": "Authentification",
+      "stories": [
+        {
+          "id": "story-controller-SecurityController",
+          "title": "S'authentifier sur la plateforme",
+          "persona": "utilisateur",
+          "action": "se connecter et se déconnecter de la plateforme",
+          "benefit": "accéder aux fonctionnalités réservées aux membres",
+          "source": {
+            "type": "controller",
+            "name": "SecurityController",
+            "source_file": "/input/src/AppBundle/Controller/SecurityController.php"
+          },
+          "test_files": [
+            "/output/test/security.integration-spec.ts"
+          ],
+          "acceptance_criteria": [
+            {
+              "id": "ac-023",
+              "description": "GET /login → formulaire avec username",
+              "implemented": false
+            },
+            {
+              "id": "ac-024",
+              "description": "GET /logout → firewall Symfony",
+              "implemented": false
+            }
+          ],
+          "estimated_complexity": "low",
+          "feedback_history": []
+        },
+        {
+          "id": "story-entity-User",
+          "title": "Gérer les comptes utilisateurs",
+          "persona": "système",
+          "action": "valider et stocker les données des utilisateurs",
+          "benefit": "assurer l'unicité et la sécurité des comptes",
+          "source": {
+            "type": "entity",
+            "name": "User",
+            "source_file": "/input/src/AppBundle/Entity/User.php"
+          },
+          "test_files": [
+            "/output/test/models/user.spec.ts"
+          ],
+          "acceptance_criteria": [
+            {
+              "id": "ac-025",
+              "description": "Username unique",
+              "implemented": false
+            },
+            {
+              "id": "ac-026",
+              "description": "Email unique",
+              "implemented": false
+            },
+            {
+              "id": "ac-027",
+              "description": "ROLE_USER attribué par défaut",
+              "implemented": false
+            },
+            {
+              "id": "ac-028",
+              "description": "Implémente UserInterface",
+              "implemented": false
+            }
+          ],
+          "estimated_complexity": "medium",
+          "feedback_history": []
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_stories": 7,
+    "by_status": {
+      "pending": 7,
+      "in_progress": 0,
+      "done": 0
+    }
+  }
+}
