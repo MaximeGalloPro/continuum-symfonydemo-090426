@@ -1,6 +1,0 @@
-{"ts":1775684179594,"type":"run_started","agentType":"dryer","name":"damien"}
-{"ts":1775684179595,"type":"assistant_text","text":"Found 16 source files to analyze"}
-{"ts":1775684179596,"type":"tool_use","tool":"query","input":{"prompt":"Tu es un expert en refactoring et en principes DRY (Don't Repeat Yourself).\n\nAnalyse les fichiers source suivants d'un projet NestJS et identifie:\n\n1. **Code dupliqué** - Blocs de code identiques ou t..."}}
-{"ts":1775684281028,"type":"assistant_text","text":"# Rapport d'analyse DRY — Projet NestJS\n\n---\n\n## Résumé des problèmes identifiés\n\n| # | Problème | Sévérité | Fichiers concernés |\n|---|----------|----------|--------------------|\n| 1 | `getToken` / `extractBearerToken` dupliqué | 🔴 Haute | 3 contrôleurs |\n| 2 | `requireAuth` dupliqué | 🔴 Haute | 2 contrôleurs |\n| 3 | Vérification CSRF répétée | 🟠 Moyenne | `AdminPostController` (×3) |\n| 4 | `parseInt` + `isNaN` + NotFound répété | 🟠 Moyenne | `AdminPostController` (×4) |\n| 5 | Magic strings"}
-{"ts":1775684281768,"type":"assistant_text","text":"Report written to /output/dry-hints.md"}
-{"ts":1775684281768,"type":"run_completed","status":"success","summary":"Found DRY hints in 16 files","durationMs":102174}
