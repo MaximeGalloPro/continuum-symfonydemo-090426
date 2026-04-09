@@ -1,0 +1,25 @@
+{
+  "pages": {
+    "Blog": {
+      "name": "Blog",
+      "test_file": "/output/frontend/test/pages/BlogPage.spec.tsx",
+      "api_file": "/output/frontend/src/api/blog.ts",
+      "page_file": "/output/frontend/src/pages/BlogPage.tsx",
+      "generated_at": "2026-04-08T00:00:00Z"
+    },
+    "AdminBlog": {
+      "name": "AdminBlog",
+      "test_file": "/output/frontend/test/pages/AdminBlogPage.spec.tsx",
+      "api_file": "/output/frontend/src/api/admin-blog.ts",
+      "page_file": "/output/frontend/src/pages/AdminBlogPage.tsx",
+      "generated_at": "2026-04-08T00:00:00Z"
+    },
+    "Security": {
+      "name": "Security",
+      "test_file": "/output/frontend/test/pages/SecurityPage.spec.tsx",
+      "api_file": "/output/frontend/src/api/security.ts",
+      "page_file": "/output/frontend/src/pages/SecurityPage.tsx",
+      "generated_at": "2026-04-08T00:00:00Z"
+    }
+  }
+}

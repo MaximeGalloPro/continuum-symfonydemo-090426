@@ -1,0 +1,36 @@
+{
+  "pages": {
+    "Blog": {
+      "name": "Blog",
+      "implementation_file": "/output/frontend/src/pages/BlogPage.tsx",
+      "implemented_at": "2026-04-08T21:43:05.474Z",
+      "implemented_by": "helene",
+      "blocked_at": "2026-04-09T00:58:27.699Z",
+      "attempts": 1
+    },
+    "AdminBlog": {
+      "name": "AdminBlog",
+      "implementation_file": "/output/frontend/src/pages/AdminBlogPage.tsx",
+      "implemented_at": "2026-04-09T00:58:27.711Z",
+      "implemented_by": "valerie",
+      "tests_passing": 1,
+      "tests_total": 1,
+      "attempts": 3,
+      "failed_at": "2026-04-09T04:12:05.063Z",
+      "last_error": "Unit tests passed but E2E failed: E2E test failed"
+    },
+    "Security": {
+      "name": "Security",
+      "implementation_file": "/output/frontend/src/pages/SecurityPage.tsx",
+      "implemented_at": "2026-04-09T04:12:05.076Z",
+      "implemented_by": "tanguy",
+      "tests_passing": 1,
+      "tests_total": 1,
+      "attempts": 3,
+      "verified_at": "2026-04-09T06:49:41.282Z",
+      "screenshot": "/output/frontend/screenshots/SecurityPage.png",
+      "screenshot_at": "2026-04-09T06:49:41.282Z"
+    }
+  },
+  "externalErrors": []
+}
