@@ -1,13 +1,38 @@
 {
   "pipelineId": "729cafad-a81a-452c-82bb-15d0865a7cc5",
-  "currentPhase": "cloning",
-  "completedPhases": [],
-  "checkpoint": null,
+  "currentPhase": "cartography",
+  "completedPhases": [
+    {
+      "phase": "cloning",
+      "completedAt": "2026-04-24T14:49:06.461Z",
+      "commitSha": "78aacb8d4e07841be7ce0e48891e3f986075a554",
+      "tagName": "phase/cloning"
+    }
+  ],
+  "checkpoint": {
+    "phase": "cloning",
+    "commitSha": "78aacb8d4e07841be7ce0e48891e3f986075a554",
+    "tagName": "phase/cloning",
+    "createdAt": "2026-04-24T14:49:06.461Z"
+  },
   "history": [
     {
       "from": "idle",
       "to": "cloning",
       "timestamp": "2026-04-24T14:49:00.635Z",
+      "trigger": "auto"
+    },
+    {
+      "from": "cloning",
+      "to": "idle",
+      "timestamp": "2026-04-24T14:49:06.461Z",
+      "trigger": "auto",
+      "commitSha": "78aacb8d4e07841be7ce0e48891e3f986075a554"
+    },
+    {
+      "from": "idle",
+      "to": "cartography",
+      "timestamp": "2026-04-24T15:00:07.528Z",
       "trigger": "auto"
     }
   ],

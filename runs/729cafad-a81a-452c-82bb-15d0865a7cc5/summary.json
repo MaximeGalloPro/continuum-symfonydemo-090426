@@ -4,11 +4,17 @@
   "status": "running",
   "phases": {
     "cloning": {
-      "startedAt": "2026-04-24T14:48:44.895Z"
+      "startedAt": "2026-04-24T14:48:44.895Z",
+      "endedAt": "2026-04-24T14:49:06.608Z",
+      "durationMs": 21713,
+      "outcome": "ok"
+    },
+    "cartography": {
+      "startedAt": "2026-04-24T14:57:42.739Z"
     }
   },
   "agents": {
-    "total": 0,
+    "total": 1,
     "retries": 0
   },
   "operations": [],
@@ -18,5 +24,5 @@
     "failed": 0,
     "items": []
   },
-  "eventsCount": 1
+  "eventsCount": 5
 }
