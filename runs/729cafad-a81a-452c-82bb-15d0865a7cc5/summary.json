@@ -10,19 +10,34 @@
       "outcome": "ok"
     },
     "cartography": {
-      "startedAt": "2026-04-24T14:57:42.739Z"
+      "startedAt": "2026-04-24T14:57:42.739Z",
+      "endedAt": "2026-04-24T15:00:12.729Z",
+      "durationMs": 149990,
+      "outcome": "ok"
+    },
+    "stories": {
+      "startedAt": "2026-04-24T15:00:34.093Z"
     }
   },
   "agents": {
-    "total": 1,
+    "total": 2,
     "retries": 0
   },
-  "operations": [],
+  "operations": [
+    {
+      "source": "stories-enriched",
+      "ts": "2026-04-24T15:02:45.026Z",
+      "meta": {
+        "storiesCount": 7,
+        "flowsCount": 6
+      }
+    }
+  ],
   "audits": [],
   "assertions": {
     "passed": 0,
     "failed": 0,
     "items": []
   },
-  "eventsCount": 5
+  "eventsCount": 10
 }

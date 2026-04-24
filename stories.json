@@ -1,0 +1,439 @@
+{
+  "generated_at": "2026-04-24T15:00:34.107Z",
+  "generated_by": "story-teller",
+  "domains": [
+    {
+      "name": "authentification",
+      "display_name": "Authentification",
+      "stories": [
+        {
+          "id": "story-controller-SecurityController",
+          "title": "Se connecter et se déconnecter",
+          "persona": "visiteur",
+          "action": "me connecter et me déconnecter de la plateforme",
+          "benefit": "accéder aux fonctionnalités selon mon rôle",
+          "source": {
+            "type": "controller",
+            "name": "SecurityController",
+            "source_file": "/input/src/AppBundle/Controller/SecurityController.php"
+          },
+          "test_files": [
+            "/output/test/security.integration-spec.ts"
+          ],
+          "acceptance_criteria": [
+            {
+              "id": "ac-001",
+              "description": "GET /login → formulaire affiché",
+              "implemented": false
+            },
+            {
+              "id": "ac-002",
+              "description": "Login invalide → message d'erreur",
+              "implemented": false
+            },
+            {
+              "id": "ac-003",
+              "description": "GET /logout → session terminée",
+              "implemented": false
+            }
+          ],
+          "estimated_complexity": "low",
+          "flows": [
+            {
+              "name": "visitor-accesses-login-page",
+              "steps": [
+                {
+                  "kind": "visit",
+                  "target": "/login"
+                },
+                {
+                  "kind": "expectStatus",
+                  "value": "200"
+                }
+              ]
+            },
+            {
+              "name": "admin-logs-in-successfully",
+              "steps": [
+                {
+                  "kind": "login",
+                  "as": "jane_admin"
+                },
+                {
+                  "kind": "expectUrl",
+                  "value": "/admin/post/"
+                }
+              ]
+            }
+          ],
+          "feedback_history": []
+        },
+        {
+          "id": "story-entity-User",
+          "title": "Structurer le compte utilisateur",
+          "persona": "système",
+          "action": "valider et persister les données d'un utilisateur",
+          "benefit": "garantir l'intégrité des comptes et des accès",
+          "source": {
+            "type": "entity",
+            "name": "User",
+            "source_file": "/input/src/AppBundle/Entity/User.php"
+          },
+          "test_files": [
+            "/output/test/models/user.spec.ts"
+          ],
+          "acceptance_criteria": [
+            {
+              "id": "ac-004",
+              "description": "Username unique en base",
+              "implemented": false
+            },
+            {
+              "id": "ac-005",
+              "description": "Email unique en base",
+              "implemented": false
+            },
+            {
+              "id": "ac-006",
+              "description": "Rôle ROLE_USER par défaut",
+              "implemented": false
+            },
+            {
+              "id": "ac-007",
+              "description": "Implémente UserInterface Symfony",
+              "implemented": false
+            },
+            {
+              "id": "ac-008",
+              "description": "Mot de passe requis",
+              "implemented": false
+            }
+          ],
+          "estimated_complexity": "medium",
+          "feedback_history": []
+        }
+      ]
+    },
+    {
+      "name": "blog-public",
+      "display_name": "Blog public",
+      "stories": [
+        {
+          "id": "story-controller-BlogController",
+          "title": "Consulter et commenter les articles",
+          "persona": "visiteur",
+          "action": "parcourir les articles et soumettre des commentaires",
+          "benefit": "m'informer et participer aux discussions",
+          "source": {
+            "type": "controller",
+            "name": "BlogController",
+            "source_file": "/input/src/AppBundle/Controller/BlogController.php"
+          },
+          "test_files": [
+            "/output/test/blog.integration-spec.ts"
+          ],
+          "acceptance_criteria": [
+            {
+              "id": "ac-009",
+              "description": "GET /blog/ → liste paginée",
+              "implemented": false
+            },
+            {
+              "id": "ac-010",
+              "description": "GET /blog/rss.xml → flux RSS valide",
+              "implemented": false
+            },
+            {
+              "id": "ac-011",
+              "description": "GET /blog/posts/{slug} → article",
+              "implemented": false
+            },
+            {
+              "id": "ac-012",
+              "description": "POST commentaire → enregistré",
+              "implemented": false
+            },
+            {
+              "id": "ac-013",
+              "description": "Pagination /blog/page/{page}",
+              "implemented": false
+            }
+          ],
+          "estimated_complexity": "medium",
+          "flows": [
+            {
+              "name": "visitor-browses-blog-listing",
+              "steps": [
+                {
+                  "kind": "visit",
+                  "target": "/blog/"
+                },
+                {
+                  "kind": "expectStatus",
+                  "value": "200"
+                }
+              ]
+            },
+            {
+              "name": "user-submits-comment-on-post",
+              "steps": [
+                {
+                  "kind": "login",
+                  "as": "john_user"
+                },
+                {
+                  "kind": "visit",
+                  "target": "/blog/posts/lorem-ipsum"
+                },
+                {
+                  "kind": "fill",
+                  "target": "Commentaire",
+                  "value": "Très bon article !"
+                },
+                {
+                  "kind": "click",
+                  "role": "Publier"
+                },
+                {
+                  "kind": "expectText",
+                  "value": "Très bon article !"
+                }
+              ]
+            }
+          ],
+          "feedback_history": []
+        },
+        {
+          "id": "story-entity-Comment",
+          "title": "Valider les commentaires",
+          "persona": "système",
+          "action": "contrôler la conformité d'un commentaire soumis",
+          "benefit": "éviter le spam et garantir la qualité du contenu",
+          "source": {
+            "type": "entity",
+            "name": "Comment",
+            "source_file": "/input/src/AppBundle/Entity/Comment.php"
+          },
+          "test_files": [
+            "/output/test/models/comment.spec.ts"
+          ],
+          "acceptance_criteria": [
+            {
+              "id": "ac-014",
+              "description": "Contenu requis (NotBlank)",
+              "implemented": false
+            },
+            {
+              "id": "ac-015",
+              "description": "Contenu entre 5 et 10 000 chars",
+              "implemented": false
+            },
+            {
+              "id": "ac-016",
+              "description": "Pas de '@' dans le contenu",
+              "implemented": false
+            },
+            {
+              "id": "ac-017",
+              "description": "PublishedAt datetime valide",
+              "implemented": false
+            },
+            {
+              "id": "ac-018",
+              "description": "Lié à un Post et un User",
+              "implemented": false
+            }
+          ],
+          "estimated_complexity": "medium",
+          "feedback_history": []
+        },
+        {
+          "id": "story-entity-Tag",
+          "title": "Gérer les tags d'articles",
+          "persona": "système",
+          "action": "créer et identifier les tags associés aux articles",
+          "benefit": "catégoriser le contenu et enrichir les réponses API",
+          "source": {
+            "type": "entity",
+            "name": "Tag",
+            "source_file": "/input/src/AppBundle/Entity/Tag.php"
+          },
+          "test_files": [
+            "/output/test/models/tag.spec.ts"
+          ],
+          "acceptance_criteria": [
+            {
+              "id": "ac-019",
+              "description": "Nom de tag unique en base",
+              "implemented": false
+            },
+            {
+              "id": "ac-020",
+              "description": "Sérialisable en JSON (API)",
+              "implemented": false
+            }
+          ],
+          "estimated_complexity": "low",
+          "feedback_history": []
+        }
+      ]
+    },
+    {
+      "name": "administration-blog",
+      "display_name": "Administration du blog",
+      "stories": [
+        {
+          "id": "story-controller-AdminBlogController",
+          "title": "Administrer les articles du blog",
+          "persona": "administrateur",
+          "action": "créer, modifier et supprimer ses articles",
+          "benefit": "gérer le contenu éditorial de la plateforme",
+          "source": {
+            "type": "controller",
+            "name": "Admin\\BlogController",
+            "source_file": "/input/src/AppBundle/Controller/Admin/BlogController.php"
+          },
+          "test_files": [
+            "/output/test/admin-blog.integration-spec.ts"
+          ],
+          "acceptance_criteria": [
+            {
+              "id": "ac-021",
+              "description": "GET /admin/post/ → liste ses posts",
+              "implemented": false
+            },
+            {
+              "id": "ac-022",
+              "description": "POST /admin/post/new → crée un post",
+              "implemented": false
+            },
+            {
+              "id": "ac-023",
+              "description": "GET /admin/post/{id}/edit → formulaire",
+              "implemented": false
+            },
+            {
+              "id": "ac-024",
+              "description": "POST edit → modifie le post",
+              "implemented": false
+            },
+            {
+              "id": "ac-025",
+              "description": "DELETE avec token CSRF valide",
+              "implemented": false
+            }
+          ],
+          "estimated_complexity": "high",
+          "flows": [
+            {
+              "name": "admin-lists-own-posts",
+              "steps": [
+                {
+                  "kind": "login",
+                  "as": "jane_admin"
+                },
+                {
+                  "kind": "visit",
+                  "target": "/admin/post/"
+                },
+                {
+                  "kind": "expectStatus",
+                  "value": "200"
+                }
+              ]
+            },
+            {
+              "name": "admin-creates-new-post",
+              "steps": [
+                {
+                  "kind": "login",
+                  "as": "jane_admin"
+                },
+                {
+                  "kind": "visit",
+                  "target": "/admin/post/new"
+                },
+                {
+                  "kind": "fill",
+                  "target": "Titre",
+                  "value": "Mon nouvel article"
+                },
+                {
+                  "kind": "fill",
+                  "target": "Résumé",
+                  "value": "Un bref résumé."
+                },
+                {
+                  "kind": "fill",
+                  "target": "Contenu",
+                  "value": "Le contenu de l'article."
+                },
+                {
+                  "kind": "click",
+                  "role": "Créer"
+                },
+                {
+                  "kind": "expectUrl",
+                  "value": "/admin/post/"
+                }
+              ]
+            }
+          ],
+          "feedback_history": []
+        },
+        {
+          "id": "story-entity-Post",
+          "title": "Valider la structure d'un article",
+          "persona": "système",
+          "action": "contrôler les données d'un article avant persistance",
+          "benefit": "garantir la qualité et l'intégrité du contenu publié",
+          "source": {
+            "type": "entity",
+            "name": "Post",
+            "source_file": "/input/src/AppBundle/Entity/Post.php"
+          },
+          "test_files": [
+            "/output/test/models/post.spec.ts"
+          ],
+          "acceptance_criteria": [
+            {
+              "id": "ac-026",
+              "description": "Titre et résumé requis",
+              "implemented": false
+            },
+            {
+              "id": "ac-027",
+              "description": "Contenu ≥ 10 caractères",
+              "implemented": false
+            },
+            {
+              "id": "ac-028",
+              "description": "PublishedAt datetime valide",
+              "implemented": false
+            },
+            {
+              "id": "ac-029",
+              "description": "Maximum 4 tags par post",
+              "implemented": false
+            },
+            {
+              "id": "ac-030",
+              "description": "Lié à un auteur (ManyToOne)",
+              "implemented": false
+            }
+          ],
+          "estimated_complexity": "medium",
+          "feedback_history": []
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_stories": 7,
+    "by_status": {
+      "pending": 7,
+      "in_progress": 0,
+      "done": 0
+    }
+  }
+}
