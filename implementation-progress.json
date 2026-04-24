@@ -1,0 +1,69 @@
+{
+  "controllers": {
+    "SecurityController": {
+      "source_file": "",
+      "implementation_file": "",
+      "implemented_at": "2026-04-24T15:25:03.404Z",
+      "implemented_by": "enora",
+      "verified_at": "2026-04-24T15:33:12.378Z",
+      "tests_passing": 8,
+      "tests_total": 8
+    },
+    "Admin\\BlogController": {
+      "source_file": "",
+      "implementation_file": "",
+      "implemented_at": "2026-04-24T15:33:12.410Z",
+      "implemented_by": "isabelle",
+      "verified_at": "2026-04-24T15:40:49.452Z",
+      "tests_passing": 20,
+      "tests_total": 20
+    },
+    "BlogController": {
+      "source_file": "",
+      "implementation_file": "",
+      "implemented_at": "2026-04-24T15:40:49.484Z",
+      "implemented_by": "jules",
+      "verified_at": "2026-04-24T15:47:38.383Z",
+      "tests_passing": 19,
+      "tests_total": 19
+    }
+  },
+  "entities": {
+    "User": {
+      "source_file": "",
+      "implementation_file": "",
+      "implemented_at": "2026-04-24T15:08:03.608Z",
+      "implemented_by": "aristide",
+      "verified_at": "2026-04-24T15:20:00.586Z",
+      "tests_passing": 8,
+      "tests_total": 8
+    },
+    "Tag": {
+      "source_file": "",
+      "implementation_file": "",
+      "implemented_at": "2026-04-24T15:20:00.618Z",
+      "implemented_by": "brieuc",
+      "verified_at": "2026-04-24T15:20:45.374Z",
+      "tests_passing": 7,
+      "tests_total": 7
+    },
+    "Comment": {
+      "source_file": "",
+      "implementation_file": "",
+      "implemented_at": "2026-04-24T15:20:45.406Z",
+      "implemented_by": "marcel",
+      "verified_at": "2026-04-24T15:23:24.495Z",
+      "tests_passing": 14,
+      "tests_total": 14
+    },
+    "Post": {
+      "source_file": "",
+      "implementation_file": "",
+      "implemented_at": "2026-04-24T15:23:24.524Z",
+      "implemented_by": "laura",
+      "verified_at": "2026-04-24T15:25:03.373Z",
+      "tests_passing": 15,
+      "tests_total": 15
+    }
+  }
+}

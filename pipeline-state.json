@@ -1,6 +1,6 @@
 {
   "pipelineId": "729cafad-a81a-452c-82bb-15d0865a7cc5",
-  "currentPhase": "tests",
+  "currentPhase": "coder",
   "completedPhases": [
     {
       "phase": "cloning",
@@ -19,13 +19,19 @@
       "completedAt": "2026-04-24T15:02:49.414Z",
       "commitSha": "241ab1e1a080a6faec84bbdf0de0320ed38393b7",
       "tagName": "phase/stories"
+    },
+    {
+      "phase": "tests",
+      "completedAt": "2026-04-24T15:06:18.915Z",
+      "commitSha": "4193ff4986ea16c403722dd0bd8d45ce55835208",
+      "tagName": "phase/tests"
     }
   ],
   "checkpoint": {
-    "phase": "stories",
-    "commitSha": "241ab1e1a080a6faec84bbdf0de0320ed38393b7",
-    "tagName": "phase/stories",
-    "createdAt": "2026-04-24T15:02:49.414Z"
+    "phase": "tests",
+    "commitSha": "4193ff4986ea16c403722dd0bd8d45ce55835208",
+    "tagName": "phase/tests",
+    "createdAt": "2026-04-24T15:06:18.915Z"
   },
   "history": [
     {
@@ -71,6 +77,19 @@
       "from": "idle",
       "to": "tests",
       "timestamp": "2026-04-24T15:06:14.522Z",
+      "trigger": "auto"
+    },
+    {
+      "from": "tests",
+      "to": "idle",
+      "timestamp": "2026-04-24T15:06:18.915Z",
+      "trigger": "auto",
+      "commitSha": "4193ff4986ea16c403722dd0bd8d45ce55835208"
+    },
+    {
+      "from": "idle",
+      "to": "coder",
+      "timestamp": "2026-04-24T15:49:32.956Z",
       "trigger": "auto"
     }
   ],

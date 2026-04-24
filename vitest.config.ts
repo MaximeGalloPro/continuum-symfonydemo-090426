@@ -18,12 +18,21 @@ export default defineConfig({
       },
     }),
   ],
+  resolve: {
+    // Allow .js imports to resolve to .ts sources (TypeScript NodeNext interop)
+    extensionAlias: {
+      '.js': ['.ts', '.js'],
+      '.mjs': ['.mts', '.mjs'],
+      '.cjs': ['.cts', '.cjs'],
+    },
+  },
   test: {
     globals: true,
     environment: 'node',
     root: './',
     include: ['test/**/*.spec.ts', 'test/**/*.integration-spec.ts'],
     globalSetup: './test/setup/global-setup.ts',
+    setupFiles: ['./test/setup/resolve-ts-extensions.ts'],
     // DATABASE_URL vient de l'environnement Docker (Postgres)
   },
 })

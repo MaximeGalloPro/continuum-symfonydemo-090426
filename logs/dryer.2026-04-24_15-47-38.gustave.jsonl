@@ -1,0 +1,6 @@
+{"ts":1777045658401,"type":"run_started","agentType":"dryer","name":"gustave","pipelineId":"729cafad-a81a-452c-82bb-15d0865a7cc5"}
+{"ts":1777045658404,"type":"assistant_text","text":"Found 38 source files to analyze"}
+{"ts":1777045658407,"type":"tool_use","tool":"query","input":{"prompt":"Tu es un expert en refactoring et en principes DRY (Don't Repeat Yourself).\n\nAnalyse les fichiers source suivants d'un projet NestJS et identifie:\n\n1. **Code dupliqué** - Blocs de code identiques ou t..."}}
+{"ts":1777045737660,"type":"assistant_text","text":"# Rapport d'analyse DRY — Projet NestJS\n\n---\n\n## Synthèse des problèmes identifiés\n\n| # | Sévérité | Catégorie | Fichiers impactés |\n|---|----------|-----------|-------------------|\n| 1 | 🔴 Haute | DTO dupliqué (`TagDto`) | `admin/dto/post-response.dto.ts` + `blog/dto/post-list-item.dto.ts` |\n| 2 | 🔴 Haute | Champs de base des Posts dupliqués dans 3 DTOs | `PostResponseDto`, `PostDetailResponseDto`, `PostListItemDto` |\n| 3 | 🟠 Moyenne | `CreatePostDto` ≈ `UpdatePostDto` | `admin/dto/create-po"}
+{"ts":1777045738300,"type":"assistant_text","text":"Report written to /output/dry-hints.md"}
+{"ts":1777045738300,"type":"run_completed","status":"success","summary":"Found DRY hints in 38 files","durationMs":79899}
