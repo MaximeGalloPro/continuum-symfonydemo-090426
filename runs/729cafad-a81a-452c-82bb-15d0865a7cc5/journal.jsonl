@@ -8,3 +8,7 @@
 {"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-24T15:00:34.103Z","kind":"agent","action":"start","source":"user-story-teller"}
 {"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-24T15:02:45.026Z","kind":"operation","action":"end","source":"stories-enriched","meta":{"storiesCount":7,"flowsCount":6}}
 {"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-24T15:02:45.027Z","kind":"agent","action":"end","source":"user-story-teller","outcome":"ok"}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-24T15:02:49.612Z","kind":"phase","action":"end","phase":"stories","source":"phase:stories","durationMs":135519,"outcome":"ok"}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-24T15:03:09.647Z","kind":"phase","action":"start","phase":"tests","source":"phase:tests"}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-24T15:03:09.653Z","kind":"agent","action":"start","source":"test-writer:all"}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-24T15:06:14.504Z","kind":"agent","action":"end","source":"test-writer:all","outcome":"ok"}

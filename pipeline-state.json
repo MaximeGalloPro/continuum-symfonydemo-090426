@@ -1,6 +1,6 @@
 {
   "pipelineId": "729cafad-a81a-452c-82bb-15d0865a7cc5",
-  "currentPhase": "stories",
+  "currentPhase": "tests",
   "completedPhases": [
     {
       "phase": "cloning",
@@ -13,13 +13,19 @@
       "completedAt": "2026-04-24T15:00:12.510Z",
       "commitSha": "454da344d4acd7433a17f11c4c8fbefec067f7ca",
       "tagName": "phase/cartography"
+    },
+    {
+      "phase": "stories",
+      "completedAt": "2026-04-24T15:02:49.414Z",
+      "commitSha": "241ab1e1a080a6faec84bbdf0de0320ed38393b7",
+      "tagName": "phase/stories"
     }
   ],
   "checkpoint": {
-    "phase": "cartography",
-    "commitSha": "454da344d4acd7433a17f11c4c8fbefec067f7ca",
-    "tagName": "phase/cartography",
-    "createdAt": "2026-04-24T15:00:12.510Z"
+    "phase": "stories",
+    "commitSha": "241ab1e1a080a6faec84bbdf0de0320ed38393b7",
+    "tagName": "phase/stories",
+    "createdAt": "2026-04-24T15:02:49.414Z"
   },
   "history": [
     {
@@ -52,6 +58,19 @@
       "from": "idle",
       "to": "stories",
       "timestamp": "2026-04-24T15:02:45.050Z",
+      "trigger": "auto"
+    },
+    {
+      "from": "stories",
+      "to": "idle",
+      "timestamp": "2026-04-24T15:02:49.414Z",
+      "trigger": "auto",
+      "commitSha": "241ab1e1a080a6faec84bbdf0de0320ed38393b7"
+    },
+    {
+      "from": "idle",
+      "to": "tests",
+      "timestamp": "2026-04-24T15:06:14.522Z",
       "trigger": "auto"
     }
   ],

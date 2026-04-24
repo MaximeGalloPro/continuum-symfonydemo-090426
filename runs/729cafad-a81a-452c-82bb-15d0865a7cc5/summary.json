@@ -16,11 +16,17 @@
       "outcome": "ok"
     },
     "stories": {
-      "startedAt": "2026-04-24T15:00:34.093Z"
+      "startedAt": "2026-04-24T15:00:34.093Z",
+      "endedAt": "2026-04-24T15:02:49.612Z",
+      "durationMs": 135519,
+      "outcome": "ok"
+    },
+    "tests": {
+      "startedAt": "2026-04-24T15:03:09.647Z"
     }
   },
   "agents": {
-    "total": 2,
+    "total": 3,
     "retries": 0
   },
   "operations": [
@@ -39,5 +45,5 @@
     "failed": 0,
     "items": []
   },
-  "eventsCount": 10
+  "eventsCount": 14
 }
