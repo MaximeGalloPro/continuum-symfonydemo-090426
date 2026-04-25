@@ -1,0 +1,39 @@
+{
+  "pages": {
+    "AdminPosts": {
+      "name": "AdminPosts",
+      "test_file": "test/pages/AdminPostsPage.spec.tsx",
+      "generated_at": "2026-04-25T13:44:00.000Z"
+    },
+    "AdminPostNew": {
+      "name": "AdminPostNew",
+      "test_file": "test/pages/AdminPostNewPage.spec.tsx",
+      "generated_at": "2026-04-25T13:44:00.000Z"
+    },
+    "AdminPostShow": {
+      "name": "AdminPostShow",
+      "test_file": "test/pages/AdminPostShowPage.spec.tsx",
+      "generated_at": "2026-04-25T13:44:00.000Z"
+    },
+    "AdminPostEdit": {
+      "name": "AdminPostEdit",
+      "test_file": "test/pages/AdminPostEditPage.spec.tsx",
+      "generated_at": "2026-04-25T13:44:00.000Z"
+    },
+    "Post": {
+      "name": "Post",
+      "test_file": "test/pages/PostPage.spec.tsx",
+      "generated_at": "2026-04-25T13:44:00.000Z"
+    },
+    "PostPost": {
+      "name": "PostPost",
+      "test_file": "test/pages/PostPostPage.spec.tsx",
+      "generated_at": "2026-04-25T13:44:00.000Z"
+    },
+    "Login": {
+      "name": "Login",
+      "test_file": "test/pages/LoginPage.spec.tsx",
+      "generated_at": "2026-04-25T13:44:00.000Z"
+    }
+  }
+}

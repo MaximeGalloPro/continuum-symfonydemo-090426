@@ -40,11 +40,17 @@
       "outcome": "ok"
     },
     "frontend-scaffold": {
-      "startedAt": "2026-04-25T13:43:42.645Z"
+      "startedAt": "2026-04-25T13:43:42.645Z",
+      "endedAt": "2026-04-25T13:43:46.887Z",
+      "durationMs": 4242,
+      "outcome": "ok"
+    },
+    "frontend-tests": {
+      "startedAt": "2026-04-25T13:48:58.633Z"
     }
   },
   "agents": {
-    "total": 13,
+    "total": 14,
     "retries": 0
   },
   "operations": [
@@ -72,6 +78,14 @@
         "schemaBytes": 56532,
         "removedLegacy": 0,
         "removedFiles": []
+      }
+    },
+    {
+      "source": "frontend-scaffold",
+      "ts": "2026-04-25T13:43:46.888Z",
+      "meta": {
+        "pages": 7,
+        "entryRoute": "/login"
       }
     }
   ],
@@ -122,5 +136,5 @@
     "failed": 0,
     "items": []
   },
-  "eventsCount": 48
+  "eventsCount": 53
 }
