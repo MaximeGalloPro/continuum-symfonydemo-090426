@@ -1,0 +1,59 @@
+{
+  "pages": {
+    "AdminPosts": {
+      "name": "AdminPosts",
+      "implementation_file": "/output/frontend/src/pages/AdminPostsPage.tsx",
+      "implemented_at": "2026-04-25T14:57:36.063Z",
+      "implemented_by": "bruno",
+      "tests_passing": 1,
+      "tests_total": 1,
+      "attempts": 2,
+      "verified_at": "2026-04-25T15:15:18.763Z",
+      "screenshot": "/output/frontend/screenshots/AdminPostsPage.png",
+      "screenshot_at": "2026-04-25T15:15:18.763Z"
+    },
+    "AdminPostNew": {
+      "name": "AdminPostNew",
+      "implementation_file": "/output/frontend/src/pages/AdminPostNewPage.tsx",
+      "implemented_at": "2026-04-25T15:15:18.814Z",
+      "implemented_by": "eleonora",
+      "tests_passing": 1,
+      "tests_total": 1,
+      "attempts": 3,
+      "failed_at": "2026-04-25T16:04:55.919Z",
+      "last_error": "Unit tests passed but E2E failed: E2E test failed"
+    },
+    "AdminPostShow": {
+      "name": "AdminPostShow",
+      "implementation_file": "/output/frontend/src/pages/AdminPostShowPage.tsx",
+      "implemented_at": "2026-04-25T16:04:55.974Z",
+      "implemented_by": "nicolas",
+      "tests_passing": 1,
+      "tests_total": 1,
+      "attempts": 1,
+      "verified_at": "2026-04-25T16:06:41.359Z",
+      "screenshot": "/output/frontend/screenshots/AdminPostShowPage.png",
+      "screenshot_at": "2026-04-25T16:06:41.359Z"
+    },
+    "AdminPostEdit": {
+      "name": "AdminPostEdit",
+      "implementation_file": "/output/frontend/src/pages/AdminPostEditPage.tsx",
+      "implemented_at": "2026-04-25T16:06:41.400Z",
+      "implemented_by": "luca",
+      "tests_passing": 1,
+      "tests_total": 1,
+      "attempts": 1
+    },
+    "Post": {
+      "name": "Post",
+      "implementation_file": "",
+      "implemented_at": "2026-04-25T17:17:23.778Z"
+    },
+    "PostPost": {
+      "name": "PostPost",
+      "implementation_file": "",
+      "implemented_at": "2026-04-25T17:17:25.358Z"
+    }
+  },
+  "externalErrors": []
+}

@@ -1,0 +1,29 @@
+
+import { test, expect } from '@playwright/test'
+
+test('capture AdminPostEditPage', async ({ page }) => {
+  await page.goto('/admin/posts/1/edit')
+  await page.waitForLoadState('networkidle')
+
+  // Assertions: verify the page is functional (not showing errors)
+  // 1. The page component should be visible
+  await expect(page.getByTestId('admin-post-edit-page')).toBeVisible({ timeout: 5000 })
+
+  // 2. No "not found" message - catches pages with unresolved params or missing data
+  const notFoundLocator = page.locator('text=/not found/i')
+  await expect(notFoundLocator).not.toBeVisible()
+
+  // 3. No error message should be visible
+  const errorLocator = page.locator('text=/^Error:/i')
+  await expect(errorLocator).not.toBeVisible()
+
+  // 4. There should be some content (not just loading)
+  const loadingLocator = page.locator('text=/^Loading/i')
+  await expect(loadingLocator).not.toBeVisible()
+
+  // All assertions passed - capture the screenshot
+  await page.screenshot({
+    path: 'screenshots/AdminPostEditPage.png',
+    fullPage: true
+  })
+})

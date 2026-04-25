@@ -46,11 +46,17 @@
       "outcome": "ok"
     },
     "frontend-tests": {
-      "startedAt": "2026-04-25T13:48:58.633Z"
+      "startedAt": "2026-04-25T13:48:58.633Z",
+      "endedAt": "2026-04-25T13:55:09.839Z",
+      "durationMs": 371207,
+      "outcome": "ok"
+    },
+    "frontend-coder": {
+      "startedAt": "2026-04-25T17:17:21.934Z"
     }
   },
   "agents": {
-    "total": 14,
+    "total": 21,
     "retries": 0
   },
   "operations": [
@@ -136,5 +142,5 @@
     "failed": 0,
     "items": []
   },
-  "eventsCount": 53
+  "eventsCount": 69
 }

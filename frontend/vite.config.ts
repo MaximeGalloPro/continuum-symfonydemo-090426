@@ -6,6 +6,8 @@ export default defineConfig({
   server: {
     host: true,
     port: 5173,
+    hmr: false,
+    watch: null,
     proxy: {
       '/api': {
         target: 'http://app:3000',

@@ -11,11 +11,13 @@ export default defineConfig({
     ['list'],
     ['json', { outputFile: 'test-results/results.json' }],
   ],
+  globalSetup: './e2e/global-setup.ts',
   use: {
     baseURL: 'http://localhost:5173',
     trace: 'off',
     screenshot: 'on', // Capture on success and failure
     video: 'off',
+    storageState: 'e2e/auth.json',
   },
   projects: [
     {

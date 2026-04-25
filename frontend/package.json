@@ -12,7 +12,7 @@
     "journey": "playwright test e2e/journey-*.spec.ts --project=e2e --reporter=json"
   },
   "dependencies": {
-    "openapi-fetch": "^0.12.2",
+    "openapi-fetch": "^0.12.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.22.0"

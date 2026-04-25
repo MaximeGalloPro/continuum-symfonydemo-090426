@@ -1,6 +1,6 @@
 {
   "pipelineId": "729cafad-a81a-452c-82bb-15d0865a7cc5",
-  "currentPhase": "frontend-tests",
+  "currentPhase": "frontend-coder",
   "completedPhases": [
     {
       "phase": "cloning",
@@ -43,13 +43,19 @@
       "completedAt": "2026-04-25T13:43:46.684Z",
       "commitSha": "a1e6b43a8f44018da64da8520310a8ed927ae4ba",
       "tagName": "phase/frontend-scaffold"
+    },
+    {
+      "phase": "frontend-tests",
+      "completedAt": "2026-04-25T13:55:09.615Z",
+      "commitSha": "c3ff0bd842112e3a85ddb73be177a28c54d95eaf",
+      "tagName": "phase/frontend-tests"
     }
   ],
   "checkpoint": {
-    "phase": "frontend-scaffold",
-    "commitSha": "a1e6b43a8f44018da64da8520310a8ed927ae4ba",
-    "tagName": "phase/frontend-scaffold",
-    "createdAt": "2026-04-25T13:43:46.684Z"
+    "phase": "frontend-tests",
+    "commitSha": "c3ff0bd842112e3a85ddb73be177a28c54d95eaf",
+    "tagName": "phase/frontend-tests",
+    "createdAt": "2026-04-25T13:55:09.615Z"
   },
   "history": [
     {
@@ -147,6 +153,19 @@
       "from": "idle",
       "to": "frontend-tests",
       "timestamp": "2026-04-25T13:55:05.511Z",
+      "trigger": "auto"
+    },
+    {
+      "from": "frontend-tests",
+      "to": "idle",
+      "timestamp": "2026-04-25T13:55:09.615Z",
+      "trigger": "auto",
+      "commitSha": "c3ff0bd842112e3a85ddb73be177a28c54d95eaf"
+    },
+    {
+      "from": "idle",
+      "to": "frontend-coder",
+      "timestamp": "2026-04-25T17:17:26.889Z",
       "trigger": "auto"
     }
   ],
