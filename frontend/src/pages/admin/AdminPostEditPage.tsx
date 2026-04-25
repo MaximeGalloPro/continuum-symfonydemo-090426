@@ -76,6 +76,7 @@ export function AdminPostEditPage() {
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
+            style={{ width: '400px', height: '24px' }}
           />
         </div>
         <div>
@@ -84,6 +85,7 @@ export function AdminPostEditPage() {
             id="summary"
             value={summary}
             onChange={(e) => setSummary(e.target.value)}
+            style={{ width: '400px', height: '60px' }}
           />
         </div>
         <div>
@@ -92,6 +94,7 @@ export function AdminPostEditPage() {
             id="content"
             value={content}
             onChange={(e) => setContent(e.target.value)}
+            style={{ width: '400px', height: '120px' }}
           />
         </div>
         <button type="submit">Sauvegarder</button>

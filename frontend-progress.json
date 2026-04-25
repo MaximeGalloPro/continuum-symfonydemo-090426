@@ -39,20 +39,48 @@
       "name": "AdminPostEdit",
       "implementation_file": "/output/frontend/src/pages/AdminPostEditPage.tsx",
       "implemented_at": "2026-04-25T16:06:41.400Z",
-      "implemented_by": "luca",
+      "implemented_by": "clement",
       "tests_passing": 1,
       "tests_total": 1,
-      "attempts": 1
+      "attempts": 2,
+      "verified_at": "2026-04-25T20:21:26.761Z",
+      "screenshot": "/output/frontend/screenshots/AdminPostEditPage.png",
+      "screenshot_at": "2026-04-25T20:21:26.761Z"
     },
     "Post": {
       "name": "Post",
-      "implementation_file": "",
-      "implemented_at": "2026-04-25T17:17:23.778Z"
+      "implementation_file": "/output/frontend/src/pages/PostPage.tsx",
+      "implemented_at": "2026-04-25T17:17:23.778Z",
+      "implemented_by": "leon",
+      "tests_passing": 1,
+      "tests_total": 1,
+      "attempts": 1,
+      "verified_at": "2026-04-25T20:22:09.702Z",
+      "screenshot": "/output/frontend/screenshots/PostPage.png",
+      "screenshot_at": "2026-04-25T20:22:09.702Z"
     },
     "PostPost": {
       "name": "PostPost",
-      "implementation_file": "",
-      "implemented_at": "2026-04-25T17:17:25.358Z"
+      "implementation_file": "/output/frontend/src/pages/PostPostPage.tsx",
+      "implemented_at": "2026-04-25T17:17:25.358Z",
+      "implemented_by": "kevin",
+      "tests_passing": 1,
+      "tests_total": 1,
+      "attempts": 2,
+      "verified_at": "2026-04-25T20:34:53.095Z",
+      "screenshot": "/output/frontend/screenshots/PostPostPage.png",
+      "screenshot_at": "2026-04-25T20:34:53.095Z"
+    },
+    "Login": {
+      "name": "Login",
+      "implementation_file": "/output/frontend/src/pages/LoginPage.tsx",
+      "implemented_at": "2026-04-25T20:34:53.149Z",
+      "implemented_by": "loic",
+      "tests_passing": 1,
+      "tests_total": 1,
+      "attempts": 3,
+      "failed_at": "2026-04-25T20:49:55.503Z",
+      "last_error": "Unit tests passed but E2E failed: E2E test failed"
     }
   },
   "externalErrors": []

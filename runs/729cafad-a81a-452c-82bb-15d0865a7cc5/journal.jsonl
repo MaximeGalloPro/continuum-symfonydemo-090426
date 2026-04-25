@@ -75,3 +75,13 @@
 {"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T17:31:24.553Z","kind":"agent","action":"end","source":"coder-frontend:Post","outcome":"ok"}
 {"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T17:31:24.607Z","kind":"agent","action":"start","source":"coder-frontend:PostPost"}
 {"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T17:31:26.031Z","kind":"agent","action":"end","source":"coder-frontend:PostPost","outcome":"ok"}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T17:31:30.142Z","kind":"phase","action":"end","phase":"frontend-coder","source":"phase:frontend-coder","durationMs":8864,"outcome":"ok"}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T20:10:20.743Z","kind":"phase","action":"start","phase":"frontend-coder","source":"phase:frontend-coder"}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T20:10:20.767Z","kind":"agent","action":"start","source":"coder-frontend:AdminPostEdit"}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T20:21:26.762Z","kind":"agent","action":"end","source":"coder-frontend:AdminPostEdit","outcome":"ok"}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T20:21:26.808Z","kind":"agent","action":"start","source":"coder-frontend:Post"}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T20:22:09.703Z","kind":"agent","action":"end","source":"coder-frontend:Post","outcome":"ok"}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T20:22:09.756Z","kind":"agent","action":"start","source":"coder-frontend:PostPost"}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T20:34:53.096Z","kind":"agent","action":"end","source":"coder-frontend:PostPost","outcome":"ok"}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T20:34:53.148Z","kind":"agent","action":"start","source":"coder-frontend:Login"}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T20:49:55.504Z","kind":"agent","action":"end","source":"coder-frontend:Login","outcome":"ok"}

@@ -52,11 +52,11 @@
       "outcome": "ok"
     },
     "frontend-coder": {
-      "startedAt": "2026-04-25T17:31:21.278Z"
+      "startedAt": "2026-04-25T20:10:20.743Z"
     }
   },
   "agents": {
-    "total": 24,
+    "total": 28,
     "retries": 0
   },
   "operations": [
@@ -142,5 +142,5 @@
     "failed": 0,
     "items": []
   },
-  "eventsCount": 77
+  "eventsCount": 87
 }
