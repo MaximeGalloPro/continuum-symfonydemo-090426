@@ -49,13 +49,19 @@
       "completedAt": "2026-04-25T13:55:09.615Z",
       "commitSha": "c3ff0bd842112e3a85ddb73be177a28c54d95eaf",
       "tagName": "phase/frontend-tests"
+    },
+    {
+      "phase": "frontend-coder",
+      "completedAt": "2026-04-25T17:17:31.037Z",
+      "commitSha": "d665cde2d2ceac2f847e1998c4002e2cb87bee01",
+      "tagName": "phase/frontend-coder"
     }
   ],
   "checkpoint": {
-    "phase": "frontend-tests",
-    "commitSha": "c3ff0bd842112e3a85ddb73be177a28c54d95eaf",
-    "tagName": "phase/frontend-tests",
-    "createdAt": "2026-04-25T13:55:09.615Z"
+    "phase": "frontend-coder",
+    "commitSha": "d665cde2d2ceac2f847e1998c4002e2cb87bee01",
+    "tagName": "phase/frontend-coder",
+    "createdAt": "2026-04-25T17:17:31.037Z"
   },
   "history": [
     {
@@ -166,6 +172,19 @@
       "from": "idle",
       "to": "frontend-coder",
       "timestamp": "2026-04-25T17:17:26.889Z",
+      "trigger": "auto"
+    },
+    {
+      "from": "frontend-coder",
+      "to": "idle",
+      "timestamp": "2026-04-25T17:17:31.037Z",
+      "trigger": "auto",
+      "commitSha": "d665cde2d2ceac2f847e1998c4002e2cb87bee01"
+    },
+    {
+      "from": "idle",
+      "to": "frontend-coder",
+      "timestamp": "2026-04-25T17:31:26.069Z",
       "trigger": "auto"
     }
   ],
