@@ -35,7 +35,7 @@ import { DeletePostDto } from './dto/delete-post.dto.js'
 @UseGuards(JwtAuthGuard, RolesGuard)
 @Roles('ROLE_ADMIN')
 @ApiBearerAuth()
-export class BlogController {
+export class AdminBlogController {
   constructor(private readonly blogService: BlogService) {}
 
   // ──────────────────────────────────────────────────────────────────────────
@@ -62,7 +62,7 @@ export class BlogController {
     summary: 'Formulaire de création de post',
     description: "Retourne un gabarit vide pour la création d'un nouveau post.",
   })
-  @ApiResponse({ status: 200, description: 'Formulaire vide' })
+  @ApiResponse({ status: 200, description: 'Formulaire vide', type: CreatePostDto })
   @ApiResponse({ status: 401, description: 'Non authentifié' })
   newForm(): object {
     return { title: '', summary: '', content: '', publishedAt: null, tags: [] }
@@ -147,14 +147,14 @@ export class BlogController {
   // POST /admin/post/:id/delete  (admin_post_delete)
   // ──────────────────────────────────────────────────────────────────────────
   @Post('/:id/delete')
-  @HttpCode(HttpStatus.NO_CONTENT)
+  @HttpCode(HttpStatus.OK)
   @ApiOperation({
     summary: 'Supprimer un post',
     description: 'Supprime un post après validation du token CSRF.',
   })
   @ApiParam({ name: 'id', type: Number, description: 'Identifiant du post' })
   @ApiBody({ type: DeletePostDto })
-  @ApiResponse({ status: 204, description: 'Post supprimé avec succès' })
+  @ApiResponse({ status: 200, description: 'Post supprimé avec succès', type: PostResponseDto })
   @ApiResponse({ status: 401, description: 'Non authentifié' })
   @ApiResponse({ status: 403, description: 'Token CSRF invalide ou absent' })
   @ApiResponse({ status: 404, description: 'Post non trouvé' })

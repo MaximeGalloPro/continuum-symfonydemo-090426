@@ -22,6 +22,7 @@ import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard.js'
 import { LoginDto } from '../auth/dto/login.dto.js'
 import { AuthTokenDto } from '../auth/dto/auth-token.dto.js'
 import { LoginFormResponseDto } from './dto/login-form-response.dto.js'
+import { LogoutResponseDto } from './dto/logout-response.dto.js'
 
 // Source: /input/src/AppBundle/Controller/SecurityController.php
 
@@ -92,7 +93,7 @@ export class SecurityController {
     summary: 'Déconnexion',
     description: "Invalide le token JWT de l'utilisateur connecté.",
   })
-  @ApiResponse({ status: 200, description: 'Session terminée avec succès' })
+  @ApiResponse({ status: 200, description: 'Session terminée avec succès', type: LogoutResponseDto })
   @ApiResponse({ status: 401, description: 'Non authentifié' })
   logout(@Req() req: any): { message: string } {
     const user = req.user

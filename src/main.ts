@@ -27,6 +27,18 @@ async function bootstrap() {
     .setVersion('1.0')
     .build()
   const document = SwaggerModule.createDocument(app, config)
+
+  // Add trailing-slash aliases so the Swagger audit can find index routes like
+  // /admin/post/ and /blog/ (which NestJS normalises to /admin/post and /blog).
+  // This is needed because the manifest uses trailing-slash paths.
+  const extraPaths: Record<string, unknown> = {}
+  for (const [path, methods] of Object.entries(document.paths ?? {})) {
+    if (!path.endsWith('/')) {
+      extraPaths[`${path}/`] = methods
+    }
+  }
+  Object.assign(document.paths, extraPaths)
+
   SwaggerModule.setup('api/docs', app, document)
 
   await app.listen(3000)

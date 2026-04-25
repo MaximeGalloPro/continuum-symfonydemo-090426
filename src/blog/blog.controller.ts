@@ -59,7 +59,7 @@ export class BlogController {
     summary: 'Flux RSS du blog',
     description: 'Retourne un flux RSS valide contenant les 50 derniers articles publiés.',
   })
-  @ApiResponse({ status: 200, description: 'Flux RSS valide (application/rss+xml)' })
+  @ApiResponse({ status: 200, description: 'Flux RSS valide (application/rss+xml)', type: String })
   async rssAction(): Promise<string> {
     return this.blogService.generateRss()
   }

@@ -31,3 +31,16 @@
 {"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-24T15:47:38.401Z","kind":"agent","action":"start","source":"dryer"}
 {"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-24T15:48:58.301Z","kind":"agent","action":"end","source":"dryer","outcome":"ok"}
 {"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-24T15:49:32.955Z","kind":"operation","action":"end","source":"seed","meta":{"usersSeeded":2,"success":true}}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-24T15:49:37.538Z","kind":"phase","action":"end","phase":"coder","source":"phase:coder","durationMs":2493970,"outcome":"ok"}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T12:04:47.715Z","kind":"phase","action":"start","phase":"api-contract","source":"phase:api-contract"}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T12:04:47.881Z","kind":"audit","action":"fail","source":"swagger","meta":{"documentedRoutes":8,"totalRoutes":15,"issuesCount":10}}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T12:04:47.882Z","kind":"phase","action":"fail","phase":"api-contract","source":"phase:api-contract","durationMs":167,"outcome":"error","meta":{"error":"Swagger audit failed: 8/15 routes OK, 10 issues"}}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T13:03:29.901Z","kind":"phase","action":"start","phase":"api-contract","source":"phase:api-contract"}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T13:03:30.115Z","kind":"audit","action":"fail","source":"swagger","meta":{"documentedRoutes":8,"totalRoutes":15,"issuesCount":10}}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T13:03:30.117Z","kind":"agent","action":"start","source":"swagger-fixer"}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T13:15:08.620Z","kind":"agent","action":"end","source":"swagger-fixer","outcome":"ok"}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T13:15:08.800Z","kind":"audit","action":"fail","source":"swagger","meta":{"documentedRoutes":8,"totalRoutes":15,"issuesCount":10}}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T13:15:08.801Z","kind":"agent","action":"start","source":"swagger-fixer"}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T13:41:35.357Z","kind":"agent","action":"end","source":"swagger-fixer","outcome":"ok"}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T13:41:35.553Z","kind":"audit","action":"pass","source":"swagger","meta":{"documentedRoutes":15,"totalRoutes":15,"issuesCount":0}}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T13:41:39.468Z","kind":"operation","action":"end","source":"api-contract","meta":{"pathsCount":26,"schemaBytes":56532,"removedLegacy":0,"removedFiles":[]}}
