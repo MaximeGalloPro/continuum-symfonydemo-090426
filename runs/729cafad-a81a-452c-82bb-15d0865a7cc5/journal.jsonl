@@ -44,3 +44,5 @@
 {"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T13:41:35.357Z","kind":"agent","action":"end","source":"swagger-fixer","outcome":"ok"}
 {"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T13:41:35.553Z","kind":"audit","action":"pass","source":"swagger","meta":{"documentedRoutes":15,"totalRoutes":15,"issuesCount":0}}
 {"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T13:41:39.468Z","kind":"operation","action":"end","source":"api-contract","meta":{"pathsCount":26,"schemaBytes":56532,"removedLegacy":0,"removedFiles":[]}}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T13:41:43.717Z","kind":"phase","action":"end","phase":"api-contract","source":"phase:api-contract","durationMs":2293816,"outcome":"ok"}
+{"runId":"729cafad-a81a-452c-82bb-15d0865a7cc5","ts":"2026-04-25T13:43:42.645Z","kind":"phase","action":"start","phase":"frontend-scaffold","source":"phase:frontend-scaffold"}

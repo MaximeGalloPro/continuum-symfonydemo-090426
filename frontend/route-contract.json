@@ -1,0 +1,92 @@
+{
+  "generatedAt": "2026-04-25T13:43:42.651Z",
+  "pages": [
+    {
+      "name": "AdminPosts",
+      "route": "/admin/posts",
+      "testId": "admin-posts-page",
+      "pageFile": "src/pages/admin/AdminPostsPage.tsx",
+      "testFile": "test/pages/AdminPostsPage.spec.tsx",
+      "controller": "Admin\\BlogController",
+      "actions": [
+        "index"
+      ],
+      "sourceFile": "/input/src/AppBundle/Controller/Admin/BlogController.php"
+    },
+    {
+      "name": "AdminPostNew",
+      "route": "/admin/posts/new",
+      "testId": "admin-post-new-page",
+      "pageFile": "src/pages/admin/AdminPostNewPage.tsx",
+      "testFile": "test/pages/AdminPostNewPage.spec.tsx",
+      "controller": "Admin\\BlogController",
+      "actions": [
+        "new"
+      ],
+      "sourceFile": "/input/src/AppBundle/Controller/Admin/BlogController.php"
+    },
+    {
+      "name": "AdminPostShow",
+      "route": "/admin/posts/:id",
+      "testRoute": "/admin/posts/1",
+      "testId": "admin-post-show-page",
+      "pageFile": "src/pages/admin/AdminPostShowPage.tsx",
+      "testFile": "test/pages/AdminPostShowPage.spec.tsx",
+      "controller": "Admin\\BlogController",
+      "actions": [
+        "show"
+      ],
+      "sourceFile": "/input/src/AppBundle/Controller/Admin/BlogController.php"
+    },
+    {
+      "name": "AdminPostEdit",
+      "route": "/admin/posts/:id/edit",
+      "testRoute": "/admin/posts/1/edit",
+      "testId": "admin-post-edit-page",
+      "pageFile": "src/pages/admin/AdminPostEditPage.tsx",
+      "testFile": "test/pages/AdminPostEditPage.spec.tsx",
+      "controller": "Admin\\BlogController",
+      "actions": [
+        "edit"
+      ],
+      "sourceFile": "/input/src/AppBundle/Controller/Admin/BlogController.php"
+    },
+    {
+      "name": "Post",
+      "route": "/posts",
+      "testId": "post-page",
+      "pageFile": "src/pages/PostPage.tsx",
+      "testFile": "test/pages/PostPage.spec.tsx",
+      "controller": "BlogController",
+      "actions": [
+        "index"
+      ],
+      "sourceFile": "/input/src/AppBundle/Controller/BlogController.php"
+    },
+    {
+      "name": "PostPost",
+      "route": "/posts/:slug",
+      "testRoute": "/posts/lorem-ipsum",
+      "testId": "post-post-page",
+      "pageFile": "src/pages/PostPostPage.tsx",
+      "testFile": "test/pages/PostPostPage.spec.tsx",
+      "controller": "BlogController",
+      "actions": [
+        "show"
+      ],
+      "sourceFile": "/input/src/AppBundle/Controller/BlogController.php"
+    },
+    {
+      "name": "Login",
+      "route": "/login",
+      "testId": "login-page",
+      "pageFile": "src/pages/LoginPage.tsx",
+      "testFile": "test/pages/LoginPage.spec.tsx",
+      "controller": "SecurityController",
+      "actions": [
+        "login"
+      ],
+      "sourceFile": "/input/src/AppBundle/Controller/SecurityController.php"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "generatedAt": "2026-04-25T13:43:42.649Z",
+  "entities": {
+    "User": [
+      {
+        "id": 1,
+        "username": "jane_admin",
+        "email": "jane@example.com"
+      }
+    ],
+    "Post": [
+      {
+        "id": 1,
+        "slug": "lorem-ipsum"
+      }
+    ],
+    "Comment": [
+      {
+        "id": 1
+      }
+    ],
+    "Tag": [
+      {
+        "id": 1,
+        "name": "test-name"
+      }
+    ]
+  }
+}

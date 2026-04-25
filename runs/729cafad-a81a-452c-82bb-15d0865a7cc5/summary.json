@@ -34,7 +34,13 @@
       "outcome": "ok"
     },
     "api-contract": {
-      "startedAt": "2026-04-25T13:03:29.901Z"
+      "startedAt": "2026-04-25T13:03:29.901Z",
+      "endedAt": "2026-04-25T13:41:43.717Z",
+      "durationMs": 2293816,
+      "outcome": "ok"
+    },
+    "frontend-scaffold": {
+      "startedAt": "2026-04-25T13:43:42.645Z"
     }
   },
   "agents": {
@@ -116,5 +122,5 @@
     "failed": 0,
     "items": []
   },
-  "eventsCount": 46
+  "eventsCount": 48
 }

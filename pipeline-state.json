@@ -1,6 +1,6 @@
 {
   "pipelineId": "729cafad-a81a-452c-82bb-15d0865a7cc5",
-  "currentPhase": "api-contract",
+  "currentPhase": "frontend-scaffold",
   "completedPhases": [
     {
       "phase": "cloning",
@@ -31,13 +31,19 @@
       "completedAt": "2026-04-24T15:49:37.350Z",
       "commitSha": "d05ed135505beaae345359ea23ccee38c1607dd7",
       "tagName": "phase/coder"
+    },
+    {
+      "phase": "api-contract",
+      "completedAt": "2026-04-25T13:41:43.518Z",
+      "commitSha": "bd46408796e55b4d48b2cf0536f88f08523b44c4",
+      "tagName": "phase/api-contract"
     }
   ],
   "checkpoint": {
-    "phase": "coder",
-    "commitSha": "d05ed135505beaae345359ea23ccee38c1607dd7",
-    "tagName": "phase/coder",
-    "createdAt": "2026-04-24T15:49:37.350Z"
+    "phase": "api-contract",
+    "commitSha": "bd46408796e55b4d48b2cf0536f88f08523b44c4",
+    "tagName": "phase/api-contract",
+    "createdAt": "2026-04-25T13:41:43.518Z"
   },
   "history": [
     {
@@ -109,6 +115,19 @@
       "from": "idle",
       "to": "api-contract",
       "timestamp": "2026-04-25T13:41:39.469Z",
+      "trigger": "auto"
+    },
+    {
+      "from": "api-contract",
+      "to": "idle",
+      "timestamp": "2026-04-25T13:41:43.518Z",
+      "trigger": "auto",
+      "commitSha": "bd46408796e55b4d48b2cf0536f88f08523b44c4"
+    },
+    {
+      "from": "idle",
+      "to": "frontend-scaffold",
+      "timestamp": "2026-04-25T13:43:42.664Z",
       "trigger": "auto"
     }
   ],
